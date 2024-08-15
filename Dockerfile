@@ -11,13 +11,6 @@ RUN grunt
 RUN cd dist && \
     npm install --production
 
-FROM node:18-bullseye-slim
-
-RUN apt-get -qq update && apt-get install -qqy libavahi-compat-libdnssd1
-
-WORKDIR /dashkiosk
-COPY --from=builder /dashkiosk/entrypoint.sh /dashkiosk/
-COPY --from=builder /dashkiosk/dist/ /dashkiosk/dist/
 RUN chmod +x /dashkiosk/entrypoint.sh
 
 # We use SQLite by default. If you want to keep the database between
@@ -28,5 +21,5 @@ ENV NODE_ENV production
 ENV port 8080
 ENV db__options__storage /database/dashkiosk.sqlite
 
-ENTRYPOINT [ "/dashkiosk/entrypoint.sh" ]
+# ENTRYPOINT [ "/dashkiosk/entrypoint.sh" ]
 EXPOSE 8080
