@@ -4,10 +4,9 @@ RUN npm install -g bower grunt-cli
 RUN apt-get -qq update && apt-get install -qqy libavahi-compat-libdnssd-dev python-is-python3
 
 WORKDIR /dashkiosk
-COPY package.json /dashkiosk/
+COPY . /dashkiosk/
 ENV NPM_CONFIG_LOGLEVEL warn
 RUN npm install
-COPY . /dashkiosk/
 RUN grunt
 RUN cd dist && \
     npm install --production
