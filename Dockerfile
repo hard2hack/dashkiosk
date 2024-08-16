@@ -21,5 +21,5 @@ ENV NODE_ENV production
 ENV port 8080
 ENV db__options__storage /database/dashkiosk.sqlite
 
-# ENTRYPOINT [ "/dashkiosk/entrypoint.sh" ]
+ENTRYPOINT [ "/dashkiosk/entrypoint.sh" ]
 EXPOSE 8080

@@ -20,6 +20,7 @@
   "dependencies": {
     "bluebird": "~2.9.34",
     "body-parser": "~1.13.3",
+    "bower": "^1.8.14",
     "errorhandler": "~1.4.2",
     "express": "~4.13.3",
     "express-winston": "~0.3.1",
@@ -39,22 +40,22 @@
     "winston": "~1.0.1"
   },
   "optionalDependencies": {
+    "fsevents": "*",
     "mysql": "~2.8.0",
     "nodecastor": "~0.1.9",
     "pg": "~6.4.2",
     "respawn": "~2.0.0",
-    "sqlite3": "~4.0.9",
-    "fsevents": "*"
+    "sqlite3": "~4.0.9"
   },
   "devDependencies": {
     "blanket": "~1.2.0",
     "connect-livereload": "~0.5.3",
-    "grunt": "~0.4.2",
-    "grunt-cli": "~0.1.13",
+    "grunt": "^0.4.5",
     "grunt-angular-templates": "~0.5.3",
     "grunt-autoprefixer": "~3.0.3",
     "grunt-bower-task": "~0.5.0",
     "grunt-browserify": "~4.0.0",
+    "grunt-cli": "^0.1.13",
     "grunt-concurrent": "~2.0.1",
     "grunt-contrib-clean": "~0.6.0",
     "grunt-contrib-concat": "~0.5.1",
