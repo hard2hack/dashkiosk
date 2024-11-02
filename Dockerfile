@@ -18,8 +18,8 @@ RUN chmod +x /dashkiosk/entrypoint.sh
 VOLUME /database
 
 ENV NODE_ENV production
-ENV port 8080
+ENV port 8888
 ENV db__options__storage /database/dashkiosk.sqlite
 
 # ENTRYPOINT [ "/dashkiosk/entrypoint.sh" ]
-EXPOSE 8080
+EXPOSE 8888
